@@ -1,0 +1,33 @@
+{% include "header.html" %}
+
+<form class="form container-xxl container-xl container-lg container-md container-sm" action="{% url 'index' %}" method="post">
+   {% csrf_token %}
+    <div class="appointment-form grid-container">
+        <div class="fname">
+            <label for="">First Name:</label><br>
+            {{ form.first_name }}
+        </div>
+        <div class="lname">
+            <label for="">Last Name:</label><br>
+            {{ form.last_name }}
+        </div>
+        <div class="email">
+            <label for="">Email:</label><br>
+            {{ form.email }}
+        </div>
+        <div class="phone">
+            <label for="">Phone:</label><br>
+            {{ form.phone }}
+        </div>
+        <div class="notes">
+            <label for="">Notes:</label><br>
+            {{ form.notes }}
+        </div>
+        <input type="text" name="day" value="{{day}}" style="display: None;">
+        <input type="text" name="hour" value="{{hour}}" style="display: None;" >
+    </div>
+    
+   <input type="submit" value="Submit">
+</form>
+
+{% include "footer.html" %}

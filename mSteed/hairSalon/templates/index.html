@@ -1,0 +1,23 @@
+{% include "header.html" %}
+
+
+    <h2 class="month">
+        {{month}}
+        </h2>
+    <div class="days container-xxl container-xl container-lg container-md container-sm">
+        {% for day in days %}
+            <div class="day">
+                <div class="date-days flex-container">
+                    <span class="date-day">{{ day.day }}</span>
+                    {% for hour in hours %}
+                        <a class="project-details-a" href="{% url 'make_appointment' hour=hour day=day.day %}">{{hour}}</a>
+                        <button class="date-btn"></button>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+
+
+{% include "footer.html" %}

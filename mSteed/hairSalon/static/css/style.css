@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #edf2ff;
+}
+
+h2 {
+    text-align: center;
+}
+
+.days {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    gap: 16px;
+}
+
+.appointment-form {
+    grid-template-areas: "header header";
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.date-day {
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.form {
+    margin: auto;
+    padding: 10px;
+}
+
+.days {
+    padding: 16px;
+}
+
+.notes {
+    grid-area: header;
+}
+ 
+.copyright {
+    font-size:14px;
+    margin-bottom:0;
+    text-align:center;
+}
+
+footer {
+    height: 10vh;
+  padding: 50px 0 65px;
+}
